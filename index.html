@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordate!</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html" id="t-header" >Acordate!</a>
+    </header>
+
+    <div class="a">
+
+        <div id="welcome" class="card">
+            <button id="isUser" class="boton">Ingresá</button>
+            <button id="notUser" class="boton">Registrate</button>
+        </div>
+
+        <div id="initRegisterForm" class="container boot hide">
+
+            <div class="intro">
+                <p>Acordate! Es una aplicacion web para anotar esas cosas que no te acordas.</p>
+            </div>
+
+            <div class="forms" id="initRegForm">
+
+                <form id="regForm" class="container">
+                    <div class="formTitle">
+                        <h3>
+                            Crea tu cuenta y deja de olvidarte!
+                        </h3>
+                    </div>
+                    <div class="container">
+                        <label>E-mail</label>
+                        <input type="email" id="regmail" placeholder="E-mail" autofocus autocomplete="email">
+                    </div>
+                    <div class="container">
+                        <label>Contraseña</label>
+                        <p id="mincar">(mínimo 6 caracteres)</p>
+                        <input type="password" id="regpassw" placeholder="Contraseña" autocomplete="new-password">
+                    </div>
+                    <button id="regbtn">Registrarse</button>
+                </form>
+                
+            </div>
+
+            <div id="registroExitoso" class="container hide">
+                <p>Cuenta creada con éxito! Ya podes ingresar</p>
+                <button id="isUser" class="boton">Ingresá</button>
+            </div>
+
+        </div>
+
+        <div id="initLoginForm" class="container boot hide">
+
+            <div class="forms" id="initLogForm">
+
+                <form id="loginForm" class="container">
+                    <div class="formTitle">
+                        <h3>
+                            Entrá y anotá antes de que se te olvide!
+                        </h3>
+                    </div>
+                    <div class="container">
+                        <label>E-mail</label>
+                        <input type="email" id="logmail" placeholder="E-mail" autofocus autocomplete="email">
+                    </div>
+                    <div class="container">
+                        <label>Contraseña</label>
+                        <input type="password" id="logpassw" placeholder="Contraseña" autocomplete="new-password">
+                    </div>
+                    <button id="lgbtn">Ingresar</button>
+                    <button id="lgoutbtn">Cerrar Sesion</button>
+                </form>
+
+            </div>
+
+        </div>
+
+        <div id="postlogin" class="hide">
+
+            <div id="containerModelo">
+
+                <div class="card modelo">
+                    <form class="nota-form">
+                        <textarea class="c titulo" name="titulo" placeholder="Titulo (opcional)" maxlength="24" contenteditable autofocus></textarea>
+                        <textarea class="c cuerpo" name="cuerpo" placeholder="Cuerpo" maxlength="110" contenteditable></textarea>
+                    </form>
+                    <button id="guardar" class="boton btnGuardar">Guardar</button>   
+                </div>
+
+            </div>
+
+            <div class="container load">
+            </div>
+
+        </div>
+        
+    </div>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+
+
+    <!-- login y auth de el firestore -->
+    <script>
+        var firebaseConfig = {
+        apiKey: "AIzaSyBN-gYn20npU12wTqkwPzynv_Kw2e0hZb4",
+        authDomain: "acordate-app.firebaseapp.com",
+        projectId: "acordate-app",
+        storageBucket: "acordate-app.appspot.com",
+        messagingSenderId: "215442771697",
+        appId: "1:215442771697:web:3cd80958551b21cfc56350",
+        measurementId: "G-5VR4Y21V3V"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- //miapp -->
+    <script src="js/app.js"></script>
+
+</body>
+</html>
